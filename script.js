@@ -14,9 +14,7 @@ function checkAnimation() {
 window.addEventListener('scroll', checkAnimation);
 window.addEventListener('load', checkAnimation);
 
-// ===========================
-//   МОДАЛЬНОЕ ОКНО
-// ===========================
+// Модальное окно
 const openModalBtn = document.getElementById('openModal');
 const modal = document.getElementById('signupModal');
 const closeModalBtn = document.getElementById('closeModal');
@@ -39,16 +37,14 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// ===========================
-//   ОТПРАВКА НА CLOUDFLARE WORKER
-// ===========================
+// Отправка заявки через Netlify Function
 const form = document.getElementById('signupForm');
 const successMessage = document.getElementById('successMessage');
 
 if (form) {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const nameValue = document.getElementById('nameInput').value.trim();
         const phone = document.getElementById('phoneInput').value.trim();
 
@@ -57,14 +53,11 @@ if (form) {
             return;
         }
 
-        const workerURL = "https://dawn-field-d887.sabalinalbert9.workers.dev/";
-        const data = { fio: nameValue, phone: phone };
-
         try {
-            const res = await fetch(workerURL, {
+            const res = await fetch('/.netlify/functions/send-telegram', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
+                body: JSON.stringify({ name: nameValue, phone: phone })
             });
 
             if (res.ok) {
@@ -76,15 +69,14 @@ if (form) {
                 setTimeout(() => {
                     if (successMessage) successMessage.style.display = 'none';
                     if (modal) modal.style.display = 'none';
-                }, 2000);
+                }, 2500);
             } else {
-                alert("Ошибка отправки! Статус: " + res.status);
-                console.log("Ответ воркера: ", await res.text());
+                alert("Ошибка отправки! Попробуйте позвонить.");
             }
 
         } catch (err) {
-            console.error("Ошибка сети: ", err);
-            alert("Ошибка соединения с сервером!");
+            console.error("Ошибка: ", err);
+            alert("Ошибка соединения! Попробуйте позвонить.");
         }
     });
 }
