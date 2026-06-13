@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПокосТравы — Профессиональный покос травы в пгт Вахруши</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="img/icons/favicon.svg" />
+    <link rel="shortcut icon" href="img/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="img/icons/site.webmanifest" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">Покос<span class="accent">Травы</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content animate">
+            <h1>Профессиональный <span class="accent">покос травы</span> — быстро, чисто, аккуратно</h1>
+            <p>Косим участки любой сложности: газоны, заросли, бурьян, территории вокруг домов и дач. Работаем мотокосами и триммерами.</p>
+            
+            <!-- Телефон и локация -->
+            <div style="margin: 25px 0;">
+                <a href="tel:89583905348" style="color: #4CAF50; font-size: 26px; font-weight: 700; text-decoration: none; display: block; margin-bottom: 12px; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                    📱 8 (958) 390-53-48
+                </a>
+                <div class="location-badge">📍 Работаем в пгт Вахруши и окрестностях</div>
+            </div>
+            
+            <!-- Кнопки -->
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 25px; width: 100%; max-width: 100%; padding: 0 5px; box-sizing: border-box;">
+                <button class="btn btn-large" id="openModal" style="width: 100%; box-sizing: border-box;">
+                    Оставить заявку
+                </button>
+                <a href="https://vk.ru/greme231" class="btn btn-large" style="width: 100%; background: #4a76a8; text-align: center; text-decoration: none; box-sizing: border-box;">
+                    💬 Написать ВКонтакте
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2 class="animate">Почему выбирают нас</h2>
+        <p class="section-subtitle animate">Быстро выезжаем, работаем на совесть, убираем за собой</p>
+        <div class="features-grid">
+            <div class="feature-card animate">
+                <div class="icon">🌿</div>
+                <h3>Любые участки</h3>
+                <p>Косим газоны, заросшие участки, бурьян, траву вдоль заборов и дорог. Берёмся за самые запущенные территории.</p>
+            </div>
+            <div class="feature-card animate">
+                <div class="icon">🛠️</div>
+                <h3>Профессиональный инструмент</h3>
+                <p>Работаем мощными мотокосами Champion — справляемся даже с высокой и мокрой травой.</p>
+            </div>
+            <div class="feature-card animate">
+                <div class="icon">💰</div>
+                <h3>Честные цены</h3>
+                <p>Цена зависит от площади и запущенности. Называем сумму сразу — без скрытых доплат.</p>
+            </div>
+            <div class="feature-card animate">
+                <div class="icon">✅</div>
+                <h3>Качество и порядок</h3>
+                <p>Работаем аккуратно, убираем за собой. Оставляем участок чистым и ухоженным.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ПокосТравы — профессиональный покос травы в пгт Вахруши</p>
+        <p>📱 <a href="tel:89583905348">8 (958) 390-53-48</a></p>
+        <p>💬 <a href="https://vk.ru/greme231" style="color: #4CAF50;">Написать ВКонтакте</a></p>
+    </div>
+</footer>
+
+<!-- Модальное окно -->
+<div class="modal" id="signupModal">
+    <div class="modal-content">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <h2>Заявка на покос</h2>
+        <form id="signupForm">
+            <input type="text" id="nameInput" placeholder="Ваше имя" required>
+            <input type="tel" id="phoneInput" placeholder="Телефон" required>
+            <button type="submit" class="btn btn-large" style="width:100%;">Отправить заявку</button>
+            <div class="success-msg" id="successMessage">✅ Успешно! Перезвоним в течение 15 минут</div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

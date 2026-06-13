@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и цены — ПокосТравы</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="img/icons/favicon.svg" />
+    <link rel="shortcut icon" href="img/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="img/icons/site.webmanifest" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">Покос<span class="accent">Травы</span></div>
+          <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero services-hero">
+    <div class="container">
+        <div class="hero-content animate">
+            <h1>Услуги и <span class="accent">цены</span></h1>
+            <p>Прозрачные цены без скрытых доплат. Точную стоимость назовём после осмотра участка или по фото.</p>
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="container">
+        <h2 class="animate">Наши услуги</h2>
+        <p class="section-subtitle animate">Работаем в пгт Вахруши и ближайших населённых пунктах</p>
+        <div class="services-grid">
+            <div class="service-card animate">
+                <div class="icon">🌿</div>
+                <h3>Покос обычной травы</h3>
+                <p>Трава до колена/пояса. Стандартная работа мотокосой. Аккуратный ровный срез.</p>
+                <div class="price">от 300 ₽ / сотка</div>
+            </div>
+            <div class="service-card animate">
+                <div class="icon">🌾</div>
+                <h3>Покос бурьяна и высокой травы</h3>
+                <p>Густая, высокая, запущенная трава. Работаем мощным триммером с металлическим ножом.</p>
+                <div class="price">от 400 ₽ / сотка</div>
+            </div>
+            <div class="service-card animate">
+                <div class="icon">🌳</div>
+                <h3>Расчистка от кустарников</h3>
+                <p>Вырубка и покос кустарников, молодой поросли. Полная расчистка участка.</p>
+                <div class="price">от 600 ₽ / сотка</div>
+            </div>
+            <div class="service-card animate">
+                <div class="icon">🏡</div>
+                <h3>Территории вокруг домов</h3>
+                <p>Аккуратно пройдём вдоль забора, дорожек, крыльца. Всё будет ровно и красиво.</p>
+                <div class="price">от 300 ₽ / сотка</div>
+            </div>
+            <div class="service-card animate">
+                <div class="icon">🧹</div>
+                <h3>Уборка скошенной травы</h3>
+                <p>Сгребем и соберём скошенную траву в кучи. По договорённости — вывезем.</p>
+                <div class="price">от 500 ₽ за выезд</div>
+            </div>
+            <div class="service-card animate">
+                <div class="icon">📐</div>
+                <h3>Покос вдоль забора и дорожек</h3>
+                <p>Аккуратно пройдём там, где газонокосилка не достанет. Ровные края.</p>
+                <div class="price">от 50 ₽ / пог. метр</div>
+            </div>
+        </div>
+      <div style="text-align:center; margin-top:50px;" class="animate">
+        <p style="color:#aaa; margin-bottom:25px; font-size:17px; padding: 0 15px;">
+            Точную стоимость назовём после осмотра или по фото
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 15px; max-width: 450px; margin: 0 auto; padding: 0 15px;">
+            <a href="tel:89583905348" class="btn btn-large" style="text-decoration: none; white-space: nowrap;">
+                📱 Позвонить: 8 (958) 390-53-48
+            </a>
+            <button class="btn btn-large" id="openModal">
+                Оставить заявку
+            </button>
+        </div>
+</div>
+</div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ПокосТравы — профессиональный покос травы</p>
+        <p>📱 <a href="tel:89583905348">8 (958) 390-53-48</a></p>
+    </div>
+</footer>
+
+<div class="modal" id="signupModal">
+    <div class="modal-content">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <h2>Заявка на покос</h2>
+        <form id="signupForm">
+            <input type="text" id="nameInput" placeholder="Ваше имя" required>
+            <input type="tel" id="phoneInput" placeholder="Телефон" required>
+            <button type="submit" class="btn btn-large" style="width:100%;">Отправить заявку</button>
+            <div class="success-msg" id="successMessage">✅ Успешно! Перезвоним в течение 15 минут</div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

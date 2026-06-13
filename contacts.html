@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — ПокосТравы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">Покос<span class="accent">Травы</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Наши работы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero contacts-hero">
+    <div class="container" style="text-align:center;">
+        <div class="hero-content animate" style="margin:0 auto;">
+            <h1>Контакты</h1>
+            <p>Позвоните или оставьте заявку — перезвоним в течение 15 минут</p>
+        </div>
+    </div>
+</section>
+
+<section class="contacts-info">
+    <div class="container">
+        <h2 class="animate">Свяжитесь с нами</h2>
+        <p class="section-subtitle animate">Работаем ежедневно с 8:00 до 21:00</p>
+        <div class="animate">
+            <a href="tel:89583905348" class="phone-big">8 (958) 390-53-48</a>
+            <p style="color:#aaa;">Звоните или пишите в WhatsApp / Telegram</p>
+            <br>
+            <button class="btn" id="openModal">Оставить заявку</button>
+        </div>
+    </div>
+</section>
+
+<section class="team-section">
+    <div class="container">
+        <h2 class="animate">Наши косари</h2>
+        <div class="team-grid">
+            <div class="team-card animate">
+                <div class="avatar">А</div>
+                <h3>Шабалин Альберт Алексеевич</h3>
+                <div class="role">Старший косарь · руководитель</div>
+                <p>Стаж в покосе — более 10 лет. Основатель бригады. Отвечает на звонки, принимает заявки, выезжает на сложные объекты. Знает своё дело от и до.</p>
+                <p style="margin-top:15px;">📱 <a href="tel:89583905348" style="color:#4CAF50; text-decoration:none;">8 (958) 390-53-48</a></p>
+            </div>
+            <div class="team-card animate">
+                <div class="avatar">Н</div>
+                <h3>Суворов Никита Евгеньевич</h3>
+                <div class="role">Косарь</div>
+                <p>Стаж пока небольшой, но работает на совесть. Энергичный, ответственный, не боится больших объёмов. Надёжное подкрепление в бригаде.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ПокосТравы — профессиональный покос травы</p>
+        <p>📱 <a href="tel:89583905348">8 (958) 390-53-48</a></p>
+    </div>
+</footer>
+
+<div class="modal" id="signupModal">
+    <div class="modal-content">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <h2>Заявка на покос</h2>
+        <form id="signupForm">
+            <input type="text" id="nameInput" placeholder="Ваше имя" required>
+            <input type="tel" id="phoneInput" placeholder="Телефон" required>
+            <button type="submit" class="btn" style="width:100%;">Отправить заявку</button>
+            <div class="success-msg" id="successMessage">✅ Успешно! Перезвоним в течение 15 минут</div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

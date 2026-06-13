@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #0E0E10;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.accent { color: #4CAF50; }
+
+nav a {
+    margin-left: 25px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    white-space: nowrap;
+}
+
+nav ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("img/hero-bg.webp") center/cover no-repeat;
+    padding-top: 80px;
+}
+
+.hero.about-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("img/i.webp") center 30%/cover no-repeat;
+}
+
+.hero.services-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("img/program.webp") center/cover no-repeat;
+}
+
+.hero.contacts-hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("img/chelov.png") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 700px;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* КНОПКИ */
+.btn {
+    padding: 14px 30px;
+    font-size: 16px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #66bb6a;
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 18px 40px;
+    font-size: 17px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn-large:hover {
+    background: #66bb6a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* БЕЙДЖ ЛОКАЦИИ */
+.location-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* FEATURES / SERVICES */
+.features, .services-section, .about-section {
+    padding: 80px 0;
+}
+
+.features h2, .services-section h2, .about-section h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+.features-grid, .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.feature-card, .service-card {
+    background: #16181d;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #24272e;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.feature-card:hover, .service-card:hover {
+    transform: translateY(-5px);
+    border-color: #4CAF50;
+}
+
+.feature-card .icon, .service-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3, .service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.feature-card p, .service-card p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.service-card .price {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4CAF50;
+}
+
+/* ABOUT TEAM */
+.team-section {
+    padding: 80px 0;
+    background: #0a0a0c;
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background: #16181d;
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid #24272e;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    border-color: #4CAF50;
+    transform: translateY(-5px);
+}
+
+.team-card .avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.team-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.team-card .role {
+    color: #4CAF50;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.team-card p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* CONTACTS */
+.contacts-info {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contacts-info .phone-big {
+    font-size: 38px;
+    font-weight: 700;
+    color: #4CAF50;
+    margin: 20px 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contacts-info .phone-big:hover {
+    color: #66bb6a;
+}
+
+/* ANIMATIONS */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.7s ease-out;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #0d0d0f;
+    margin-top: 40px;
+    color: #888;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #16181d;
+    padding: 35px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 420px;
+    border: 1px solid #24272e;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #2a2d33;
+    background: #0d0f13;
+    color: #fff;
+    font-size: 15px;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.modal-close:hover {
+    color: #fff;
+}
+
+.success-msg {
+    display: none;
+    background: transparent;
+    color: #4CAF50;
+    padding: 10px 0;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* =========================== */
+/*   АДАПТИВ ДЛЯ ТЕЛЕФОНОВ     */
+/* =========================== */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 0;
+    }
+    
+    .header .container {
+        padding: 0 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 100px 0 60px;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .location-badge {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .btn-large {
+        padding: 16px 24px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contacts-info .phone-big {
+        font-size: 28px;
+    }
+
+    .features h2, .services-section h2, .about-section h2, .team-section h2 {
+        font-size: 26px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 25px 20px;
+    }
+}

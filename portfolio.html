@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши работы — ПокосТравы</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="img/icons/favicon.svg" />
+    <link rel="shortcut icon" href="img/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="img/icons/site.webmanifest" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">Покос<span class="accent">Травы</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Наши работы</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('img/portfolio-hero.jpg') center/cover no-repeat;">
+    <div class="container">
+        <div class="hero-content animate" style="text-align: center; margin: 0 auto;">
+            <h1>Наши <span class="accent">работы</span></h1>
+            <p>Реальные примеры наших работ в пгт Вахруши — было/стало</p>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-section">
+    <div class="container">
+        <h2 class="animate">Примеры выполненных работ</h2>
+        <p class="section-subtitle animate">Каждый проект — это чистая и аккуратная работа</p>
+        
+        <div class="portfolio-grid">
+            <!-- Работа 1 -->
+            <div class="portfolio-item animate">
+                <h3>🏡 Частный дом, пгт Вахруши</h3>
+                <div class="portfolio-images">
+                    <div style="position: relative;">
+                        <img src="img/work1-before.jpg" alt="До покоса">
+                        <span class="portfolio-label">До</span>
+                    </div>
+                    <div style="position: relative;">
+                        <img src="img/work1-after.jpg" alt="После покоса">
+                        <span class="portfolio-label">После</span>
+                    </div>
+                </div>
+                <div class="portfolio-desc">
+                    <p>Запущенный участок с бурьяном. Площадь: 8 соток. Время работы: 3 часа.</p>
+                </div>
+            </div>
+
+            <!-- Работа 2 -->
+            <div class="portfolio-item animate">
+                <h3>🌳 Дачный участок</h3>
+                <div class="portfolio-images">
+                    <div style="position: relative;">
+                        <img src="img/work2-before.jpg" alt="До покоса">
+                        <span class="portfolio-label">До</span>
+                    </div>
+                    <div style="position: relative;">
+                        <img src="img/work2-after.jpg" alt="После покоса">
+                        <span class="portfolio-label">После</span>
+                    </div>
+                </div>
+                <div class="portfolio-desc">
+                    <p>Высокая трава и кустарники вдоль забора. Площадь: 5 соток. Время работы: 2 часа.</p>
+                </div>
+            </div>
+
+            <!-- Работа 3 -->
+            <div class="portfolio-item animate">
+                <h3>🏘️ Территория вокруг дома</h3>
+                <div class="portfolio-images">
+                    <div style="position: relative;">
+                        <img src="img/work3-before.jpg" alt="До покоса">
+                        <span class="portfolio-label">До</span>
+                    </div>
+                    <div style="position: relative;">
+                        <img src="img/work3-after.jpg" alt="После покоса">
+                        <span class="portfolio-label">После</span>
+                    </div>
+                </div>
+                <div class="portfolio-desc">
+                    <p>Аккуратный покос вдоль дорожек и крыльца. Площадь: 6 соток. Время работы: 2.5 часа.</p>
+                </div>
+            </div>
+
+            <!-- Работа 4 -->
+            <div class="portfolio-item animate">
+                <h3>🌾 Запущенный участок</h3>
+                <div class="portfolio-images">
+                    <div style="position: relative;">
+                        <img src="img/work4-before.jpg" alt="До покоса">
+                        <span class="portfolio-label">До</span>
+                    </div>
+                    <div style="position: relative;">
+                        <img src="img/work4-after.jpg" alt="После покоса">
+                        <span class="portfolio-label">После</span>
+                    </div>
+                </div>
+                <div class="portfolio-desc">
+                    <p>Сильно заросший участок с бурьяном по пояс. Площадь: 10 соток. Время работы: 4 часа.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top:50px;" class="animate">
+            <p style="color:#aaa; margin-bottom:20px; font-size:17px;">Хотите такой же результат? Оставьте заявку!</p>
+            <button class="btn btn-large" id="openModal">Оставить заявку</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ПокосТравы — профессиональный покос травы</p>
+        <p>📱 <a href="tel:89583905348">8 (958) 390-53-48</a></p>
+    </div>
+</footer>
+
+<div class="modal" id="signupModal">
+    <div class="modal-content">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <h2>Заявка на покос</h2>
+        <form id="signupForm">
+            <input type="text" id="nameInput" placeholder="Ваше имя" required>
+            <input type="tel" id="phoneInput" placeholder="Телефон" required>
+            <button type="submit" class="btn btn-large" style="width:100%;">Отправить заявку</button>
+            <div class="success-msg" id="successMessage">✅ Успешно! Перезвоним в течение 15 минут</div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
