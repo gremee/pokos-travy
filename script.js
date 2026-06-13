@@ -3,7 +3,6 @@ const animatedItems = document.querySelectorAll('.animate');
 
 function checkAnimation() {
     const triggerBottom = window.innerHeight * 0.85;
-
     animatedItems.forEach(item => {
         const itemTop = item.getBoundingClientRect().top;
         if (itemTop < triggerBottom) {
@@ -15,11 +14,9 @@ function checkAnimation() {
 window.addEventListener('scroll', checkAnimation);
 window.addEventListener('load', checkAnimation);
 
-
 // ===========================
 //   МОДАЛЬНОЕ ОКНО
 // ===========================
-
 const openModalBtn = document.getElementById('openModal');
 const modal = document.getElementById('signupModal');
 const closeModalBtn = document.getElementById('closeModal');
@@ -42,18 +39,16 @@ window.addEventListener('click', (e) => {
     }
 });
 
-
 // ===========================
 //   ОТПРАВКА НА CLOUDFLARE WORKER
 // ===========================
-
 const form = document.getElementById('signupForm');
 const successMessage = document.getElementById('successMessage');
 
 if (form) {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-
+        
         const nameValue = document.getElementById('nameInput').value.trim();
         const phone = document.getElementById('phoneInput').value.trim();
 
@@ -72,8 +67,6 @@ if (form) {
                 body: JSON.stringify(data)
             });
 
-            // НЕ ПАРСИМ JSON, а просто проверяем статус ответа
-            // Если воркер вернул 200-299 — считаем успешным
             if (res.ok) {
                 if (successMessage) {
                     successMessage.style.display = 'block';
@@ -86,12 +79,11 @@ if (form) {
                 }, 2000);
             } else {
                 alert("Ошибка отправки! Статус: " + res.status);
-                console.log("Ответ воркера:", await res.text());
+                console.log("Ответ воркера: ", await res.text());
             }
 
         } catch (err) {
-            // Если вообще не дошли до воркера (CORS или сеть)
-            console.error("Ошибка сети:", err);
+            console.error("Ошибка сети: ", err);
             alert("Ошибка соединения с сервером!");
         }
     });
