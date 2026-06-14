@@ -37,7 +37,7 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Отправка заявки через Netlify Function
+// Отправка заявки через Google Apps Script
 const form = document.getElementById('signupForm');
 const successMessage = document.getElementById('successMessage');
 
@@ -54,7 +54,7 @@ if (form) {
         }
 
         try {
-            const res = await fetch('/.netlify/functions/send-telegram', {
+            const res = await fetch('ТВОЙ_GOOGLE_APPS_SCRIPT_URL', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name: nameValue, phone: phone })
