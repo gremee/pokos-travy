@@ -54,7 +54,7 @@ if (form) {
         }
 
         try {
-            const res = await fetch('ТВОЙ_GOOGLE_APPS_SCRIPT_URL', {
+            const res = await fetch('https://script.google.com/macros/s/AKfycbwWhrE82jnDyI6yhlbmJbL0XsEPt5t0dydVocHuC8H4VpcP3IuRpcmtRKC4vsAwoazbpA/exec', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name: nameValue, phone: phone })
