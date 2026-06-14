@@ -54,7 +54,7 @@ if (form) {
         }
 
         try {
-            const res = await fetch('https://script.google.com/macros/s/AKfycbwWhrE82jnDyI6yhlbmJbL0XsEPt5t0dydVocHuC8H4VpcP3IuRpcmtRKC4vsAwoazbpA/exec', {
+            const res = await fetch('https://script.google.com/macros/s/AKfycbw6JcXQURHKCjjunvYo-7CO1Q01IXVl0pn35k79OGLd6m4ysa1i6SwOzMPuxlCZdzlLQQ/exec', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name: nameValue, phone: phone })
