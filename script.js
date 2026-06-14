@@ -55,7 +55,7 @@ if (form) {
 
         try {
             // Используем GET вместо POST (обходим CORS)
-            const scriptUrl = 'https://script.google.com/macros/s/AKfycbw6JcXQURHKCjjunvYo-7CO1Q01IXVl0pn35k79OGLd6m4ysa1i6SwOzMPuxlCZdzlLQQ/exec';
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbxVyYB0TMrZml6SJmKy53MQ8uuQrxuvDqVOfCiw1jfpUrRCZIUPbiSSa_mD1VWxNUuzzQ/exec';
             
             const res = await fetch(scriptUrl + '?name=' + encodeURIComponent(nameValue) + '&phone=' + encodeURIComponent(phone), {
                 method: "GET"
